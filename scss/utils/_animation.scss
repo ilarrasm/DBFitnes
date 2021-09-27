@@ -1,0 +1,20 @@
+@keyframes cardAnimation{
+  
+    5%    {
+        transform: scale(105% ,105%); 
+        filter: drop-shadow(1px 1px 0.15rem #fbff00);
+    }
+    45% {
+        transform: scale(100%, 100%);
+    }
+}
+
+@keyframes hooverA{
+    0%   {background:rgba(253, 253, 122, 1);}
+    75% { filter: none;}
+
+}
+@keyframes navAnimationA {
+    50% {background-color: rgb(252, 248, 25); }
+    100%{background-color: rgb(250, 255, 181); }
+}

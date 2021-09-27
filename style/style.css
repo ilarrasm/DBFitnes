@@ -1,0 +1,504 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+
+/* voy a utilizar camelCase*/
+:root{
+    --color-black: rgba(27, 32, 33, 0.9);
+    --color-black-opa: rgba(27, 32, 33, 0.7)
+}
+/* Reset */
+*{
+    padding: 0;
+    margin: 0;
+}
+/* fin de reset*/
+/*  H's*/
+h1{
+    font-weight: 400;
+}
+h2{
+    color: lightyellow;
+    font-weight: 300;
+    font-size: 5em;
+    margin: 1rem;
+    padding: 1rem;
+    position: relative;
+    font-style: italic;
+    z-index: 1;
+    
+}
+
+
+/*  Fin de H's  */
+/*estructura general*/
+html{
+    font-family: "Oswald", sans-serif;
+    font-weight: 200;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    background: var(--color-black);
+    height: 30vh;
+}
+header a{
+    font-weight: 300;
+}
+
+.icoIg{
+    display: flex;
+    position: relative;
+    padding: 0.1em;
+    margin-left: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+.icoIg img{
+    display: flex;
+    width: 7%;
+    justify-content: center;
+}
+.icoIg span{
+    font-size: 0.7rem;
+    font-style: initial;
+    color: #fcccf1;
+    position: absolute;
+    left: 8%;
+    font-weight: 300;
+    opacity: 0.8;
+    
+}
+.navO ul{
+    display: flex;
+    justify-content: center;
+    margin-right: 1rem;
+}
+.navO ul li {
+    list-style: none;
+}
+.navO ul li a{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0.5rem;
+    font-size: .9rem;
+    font-weight: 100;
+    color: rgb(230, 230, 230);
+}
+.navO ul li a:hover{
+    animation: hooverA 2s step-end;
+}
+.rowT{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.logo{
+    display: inline-block;
+    margin: 1rem 3rem;
+}
+.logo img{
+    width: 25%;
+}
+.navT{
+    display: flex;
+    position: absolute;
+    right: 35%;
+}
+.navT ul{
+    display: flex;
+}
+.navT ul li {
+    list-style: none;
+}
+.navT ul li a{
+    text-decoration: none;
+    padding: 1rem;
+    color: whitesmoke;
+    font-size: 1.3rem;
+    font-weight: 400;
+    font-style: initial;
+    margin-right: 1.2rem;
+     
+    
+}
+.navT ul li a:hover{
+    padding: 1rem;
+    background: rgb(128, 128, 63);
+    animation: navAnimationA 1s ease-in 0s infinite alternate; 
+}
+/*               Fin del Header */
+/*               Main */
+main{
+    display: flex;
+    flex-direction: column;
+    background-color: #f3f3f3;
+}
+.present{
+    display: flex;
+    width: auto;
+    height: auto;
+    justify-content: center;
+    background-color: var(--color-black) ;
+    padding: 10% 0 20% 0;
+    margin-bottom: 2rem;
+
+}
+.present img{
+    display: block;
+    width: 65%;
+    height: auto;
+    border-radius: 70%;
+    filter: contrast(.9);
+    filter: sepia(.3);
+    filter: grayscale(100%);
+    animation: presentBlur 2s ease-in-out;
+}
+.destacados{
+    display: grid;
+    grid-template-areas: 
+    "titulo titulo titulo"
+    "a b c" 
+    "d e f";
+    justify-items: center;
+}
+.destacados h2{
+    grid-area: titulo;
+}
+#a{
+    grid-area: a;
+
+}
+#b{
+    grid-area: b;
+
+}
+#c{
+    grid-area: c;
+
+}
+#d{
+    grid-area: d;
+
+}
+#e{
+    grid-area: e;
+
+}
+#f{
+    grid-area: f;   
+    
+}
+footer{
+    display: flex;
+    grid-area: footer;
+    justify-content: space-between;
+    background-color: #1B2021;
+    color: whitesmoke;
+    font-style: normal;
+}
+
+/* form */
+#contactoH2{
+    font-size: 3rem;
+}
+#contactoH2::before{
+    width: 60%;
+    height: 30%;
+    left: 0;
+    top: 20%;
+
+}
+input{
+    margin-top: 0.3rem;
+    border-radius: 0.2rem;
+    background-color: rgba(102, 102, 102, .1);
+}
+legend{
+    font-weight: 300;
+    font-size: 1.1em;
+}
+label{
+    display: block;
+}
+
+#contact{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+.textC {
+    display: flex;
+    flex-direction: column;
+    width: 56vw;
+    
+}
+.textC p{
+    text-align: justify;
+    display: inline;
+    flex-direction: column;
+    margin: 0.1rem 10rem 1rem 5rem;
+ 
+}
+.formX{
+    width: 30vw;
+    margin-left: 1.3rem;
+
+}
+.bloqA{
+    display: flex;
+}
+.contatcA{
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    height: auto;
+    align-items: flex-start;
+}
+.contatcA div{
+    margin: 0.2rem;
+}
+.contatcA label{
+    text-align: left;
+}
+.formPais{
+    display: flex;
+}
+.formPais label{
+    margin-right: 1rem;
+}
+.contactB{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-items: start;
+    /* background-color: coral; */
+    width: 50vw;
+    height: auto;
+    margin-left: 4.3rem;
+}
+.contactB div{
+    display: block;
+    position: relative;
+    margin: 0.2rem;
+}
+#cono{
+    display: block;
+    text-align: left;
+}
+.formRadio {
+    display: inline;
+    position: absolute;
+    right: 0;
+    top: 15%;
+
+}
+.contactC{
+    display: flex;
+    flex-direction: column;
+}
+.check{
+    display: inline-block;
+    
+}
+.boxC{
+    display: inline;
+    position: absolute;
+    right: 0;
+    top: 15%;
+}
+.contactC{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.contactC div{
+    position: relative;
+}
+.formAsunto{
+    display: flex;
+    flex-direction: column;
+    margin: 0.2rem;
+}
+.formAsunto textarea{
+    margin-top: 0.3rem;
+}
+.formBoton{
+    display: inline-block;
+    position: absolute;
+    left: 75%;
+    margin-top: 0.3rem;
+}
+
+/* cards      */
+.cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    margin: 3rem;
+    width: 20vw;
+    filter: drop-shadow( 0 0 0.7rem #b4b4b4);
+    border-radius: 20px;
+}
+.thumbCard{
+    display: flex;
+}
+.thumbCard img{     
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+}
+.contentCard{
+    background: rgba(177, 177, 177, 1.0);
+    background: linear-gradient(to top, rgba(255, 230, 0, 0.1) 0%, rgba(209, 208, 208, 0.3) 70%);
+}
+.contentCard a{
+    text-decoration: none;
+    color: #292929;
+}
+.card:hover{
+    animation-name: cardAnimation;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-direction: alternate;
+    /* animation-name: example;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate; */
+    
+}
+/*  fin de cards   */
+/* Medias query */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+    body {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 25vh 1fr 4rem;
+      }
+      header{
+          display: flex;
+          flex-direction: column;
+      }
+      .rowO{
+          display: flex;
+          justify-content: center;
+      }
+      .rowT{
+          display: flex;
+          flex-direction: row;
+      }
+      .logo{
+          display: flex;
+          margin: 1rem;    
+      }   
+      .navT{
+          display: flex;
+          right: 10%;
+      }
+      .navT ul li a{
+          padding: 1rem;
+      }
+      main{
+          display: flex;
+          grid-column: 1/1;
+          grid-row: 2/3
+      }
+      footer{
+          display: flex;
+          grid-column: 1/1;
+          grid-row: 3/3;
+      }
+    }
+
+@media only screen and (max-width: 400px) {
+    body {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 35vh 2fr 1fr;
+    }
+    header{
+        display: flex;
+        flex-direction: column;
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    .rowO{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .icoIg{
+        margin: 0.1rem 4rem;
+    }
+    .icoIg img{
+        height: 5vh;
+        width: auto;
+    }
+    .icoIg span{
+        display: none;
+    }
+    .rowT{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .logo{
+        display: flex;
+        justify-content: center;
+    } 
+    .logo img{
+        height: 20vh;
+        width: auto;
+    }
+    .navT{
+        display: flex;
+        position: unset;
+        align-self: center;
+        justify-content: center;
+        left: 5%;
+    }
+    .navT ul li a{
+        font-size: 1.1rem;
+        font-weight: lighter;
+        font-style: italic;
+    }
+    main{
+        display: flex;
+        grid-column: 1/2;
+        grid-row: 2/4;
+    }
+    footer{
+        display: flex;
+        grid-column: 1/2;
+        grid-row: 4/6;
+    }
+}  
+/* Animacion */
+@keyframes cardAnimation{
+  
+    5%    {
+        transform: scale(105% ,105%); 
+        filter: drop-shadow(1px 1px 0.15rem #fbff00);
+    }
+    45% {
+        transform: scale(100%, 100%);
+    }
+}
+
+@keyframes hooverA{
+    0%   {background:rgba(255, 255, 0, .3);}
+    75% { filter: none;}
+
+}
+@keyframes navAnimationA {
+    50% {background-color: saddlebrown; padding: 1rem;}
+    100%{background-color: lightblue; padding: 1rem;}
+}

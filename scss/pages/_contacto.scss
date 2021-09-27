@@ -1,0 +1,40 @@
+.main__contact{
+    display: flex;
+    flex-direction: row;
+    margin-top: 3%;
+    h2{
+        box-shadow: 5px 4px 7px rgb(54, 54, 54);
+    }
+    &__texto{
+        display: flex;
+        flex-direction: column;
+        margin-left: 3rem;
+        align-items: center;
+        justify-items: center;
+        width: 60%;
+        &__picture {
+            display: flex;
+            align-items: center;
+            height: 300px;
+            width: 60%;
+            object-fit:cover;
+            padding: .5rem;
+            background-color: $black-trans;
+            box-shadow: 5px 4px 7px rgb(54, 54, 54);
+        }
+        p{
+           letter-spacing: .1rem;
+           text-align: justify;
+           width: 60%;
+           font-size: 1.2rem;
+           word-spacing: .5rem;
+        }
+ 
+    }
+    &__form{
+        display: flex;
+        flex-direction: column;
+        margin-top: 0%;
+        width: 40%;
+    }
+}

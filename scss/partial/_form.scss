@@ -1,0 +1,110 @@
+
+.main__contact__form{
+    display: flex;
+    flex-direction: column;
+
+    .check{
+        display: inline-block;
+            
+    }
+    legend{
+        font-weight: 300;
+        font-size: 1.1em;
+    } 
+    input{
+        margin-top: 0.3rem;
+        border-radius: .1rem;
+        background-color: rgba(0, 0, 0, 0.1);
+        border: 1px solid rgb(204, 204, 204) ;
+    }
+    label{
+        display: block;
+        margin: .1rem
+    }
+    &__bloqueA{
+        display: flex;
+        padding: 1rem;
+        flex-direction: row;
+        justify-items: stretch;
+        &__contatcA{
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            align-items: flex-start;
+            label{
+                text-align: left;
+            }
+            &__formPais{
+                display: flex;
+                margin: 1rem 0;
+                label{
+                    margin-right: 1rem;
+                }
+            }
+        }
+        &__contactB{
+            display: flex;
+            flex-direction: column;
+            align-items: right;
+            height: auto;
+            width: 60%;
+            margin-left: 4.3rem;
+            &__formCono{
+                display: flex;
+                text-align: left;
+                justify-self: flex-start;
+                &__label{
+                    display: flex;
+                    flex-direction: column;
+                }
+                &__input{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    margin: 0 0 .1rem 2rem;
+                    width:30%;
+                    input{
+                        width:30%;
+                        margin: 0 0 .1rem 2rem;
+                    } 
+                }
+            }
+        }    
+    }
+    &__bloqueC{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 1rem;
+        &__formAsunto{
+            display: flex;
+            flex-direction: column;
+            margin: 0.2rem;
+            textarea{
+                display: flex;
+                margin-top: 0.3rem;
+                resize: none;
+                //Acá llamar un extender
+                font-family: monospace;
+                font-weight: 600;
+            }
+        }
+        &__formBoton{
+            display: flex;
+            flex-direction: row;
+            justify-content:flex-end;
+            input{
+                @include baw();
+                border: none;
+                padding: .5rem;
+                transition: .5s;
+
+            }
+            input:hover{
+                opacity: .7;
+            }
+        }
+    }
+         
+
+}

@@ -1,0 +1,21 @@
+// $color-black:#1B2021;
+$color-black: rgb(8, 8, 8);
+// $color-black:  #f0d701 ;
+$color-main: whitesmoke;
+// $color-main: rgb(8, 8, 8);
+$black-trans: rgba(8, 8, 8, 0.808);
+
+
+
+@mixin baw {
+    background-color: $color-black;
+    color: $color-main;  
+}
+@mixin bawt{
+    background-color: $black-trans;
+    color: $color-main;
+}
+@mixin wab{
+    background-color: $color-main;
+    color: $color-black;
+}

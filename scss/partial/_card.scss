@@ -1,0 +1,170 @@
+.card{
+    display: flex;
+    flex-direction: column;
+    margin: 3rem;
+    width: 23vw;
+    border: .1rem solid;
+    &__thumbCard{
+        display: flex;
+        img{
+        display: flex;
+        width: 23vw;
+        height: auto;
+        object-fit: cover;
+        } 
+    }
+    &__content{
+        display: flex;
+        border-radius: 0 0 20px 20px;
+        
+        ul li{
+            list-style: none;
+            a{
+                text-decoration: none;
+                color: rgb(48, 48, 48);
+
+            }
+        }
+        &__ul__item{
+            margin: .3rem .2rem;
+            &__titu{
+                display: flex;
+                color: rgb(44, 44, 44);
+                font-weight: 200;
+                font-size: 2rem;
+                justify-content: center;
+                letter-spacing: .2rem;
+                margin: 0 .9rem;
+                
+            }
+            &__cat{
+                font-weight: 100;
+                font-size: .9em;    
+                letter-spacing: .2rem;
+                word-spacing: .1rem;
+                margin: 0 1rem;
+                color: rgb(121, 121, 121);
+
+            }
+            &__data{
+                font-weight: 200;
+                font-size: 1rem;
+                text-align: justify;
+                margin: 0 .8rem;
+                word-spacing: .1rem;
+                word-break: break-all;
+            }
+        }
+        &__ul__precio{
+            display: flex;
+            justify-content: center;
+            margin: 1rem 0 0 0 ;
+            letter-spacing: .3rem;
+
+        }
+        &__ul__boton{
+            display: flex;
+            justify-content: center;
+            &__a{
+                display: flex;
+                text-align: center;
+                padding: 1rem 2rem;
+                margin: 1.2rem;
+                border: .1rem solid;
+                letter-spacing: .1rem;
+                font-size: 1.5rem;
+                transition: background-color 1s ease 0;
+            }
+            &__a:hover{
+                @include baw;
+                transition: 1s ;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+    .card{
+        display: flex;
+        flex-direction: column;
+        width: 33vw;
+        border: .1rem solid;
+        &__thumbCard{
+            display: flex;
+            img{
+                display: flex;
+                width: 33vw;
+                height: auto;
+            }  
+        }
+        &__content{
+            display: flex;
+            flex-direction: column;
+            border-radius: 0 0 20px 20px;
+            ul li{
+                list-style: none;
+                a{
+                    text-decoration: none;
+                    color: rgb(48, 48, 48);
+                }
+            }
+            &__ul__item{
+                display: flex;
+                flex-direction: column;
+                &__titu{
+                    display: flex;
+                    color: rgb(44, 44, 44);
+                    font-weight: 200;
+                    font-size: 1.3rem;
+                    justify-content: center;
+                    letter-spacing: .2rem;
+                    
+                }
+                &__cat{
+                    display: flex;
+                    font-weight: 100;
+                    font-size: .5em;    
+                    letter-spacing: .2rem;
+                    word-spacing: .1rem;
+                    color: rgb(121, 121, 121);
+                    justify-content: center;
+
+                }
+                &__data{
+                    display: flex;
+                    justify-content: center;
+                    font-weight: 200;
+                    font-size: 1rem;
+                    text-align: center;
+                    word-spacing: .1rem;
+                    letter-spacing: 0;
+                    word-break: break-all;
+                }
+            }
+            &__ul__precio p{
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                letter-spacing: .3rem;
+
+            }
+            &__ul__boton p{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                border: .1rem solid;
+                &__a{
+
+                    letter-spacing: .1rem;
+                    font-size: 1rem;
+                    padding: 1rem;
+                }
+            }
+        }
+    }
+
+}
+
+
+
+// @media only screen and (max-width: 400px) {
