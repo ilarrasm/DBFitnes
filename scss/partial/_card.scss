@@ -29,12 +29,13 @@
             margin: .3rem .2rem;
             &__titu{
                 display: flex;
-                color: rgb(44, 44, 44);
+                color: $white;
                 font-weight: 200;
                 font-size: 2rem;
                 justify-content: center;
                 letter-spacing: .2rem;
                 margin: 0 .9rem;
+                background: $color-black;
                 
             }
             &__cat{
