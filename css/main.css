@@ -155,12 +155,13 @@ header {
       margin: .3rem .2rem; }
       .card__content__ul__item__titu {
         display: flex;
-        color: #2c2c2c;
+        color: whitesmoke;
         font-weight: 200;
         font-size: 2rem;
         justify-content: center;
         letter-spacing: .2rem;
-        margin: 0 .9rem; }
+        margin: 0 .9rem;
+        background-color: #080808; }
       .card__content__ul__item__cat {
         font-weight: 100;
         font-size: .9em;

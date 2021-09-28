@@ -260,7 +260,7 @@
   },
   "devDependencies": {
     "node-sass": "^6.0.1",
-    "nodemon": "^2.0.12"
+    "nodemon": "^2.0.13"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
