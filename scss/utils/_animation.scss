@@ -10,7 +10,7 @@
 }
 
 @keyframes hooverA{
-    0%   {background:rgba(253, 253, 122, 1);}
+    0%   {@include baw;;}
     75% { filter: none;}
 
 }

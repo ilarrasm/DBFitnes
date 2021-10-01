@@ -21,29 +21,32 @@
             list-style: none;
             a{
                 text-decoration: none;
-                color: rgb(48, 48, 48);
-
             }
         }
         &__ul__item{
-            margin: .3rem .2rem;
             &__titu{
                 display: flex;
-                color: $color-main;
                 font-weight: 200;
-                font-size: 2rem;
+                font-size: 1.3rem;
+                text-transform: uppercase; 
                 justify-content: center;
                 letter-spacing: .2rem;
-                margin: 0 .9rem;
-                background-color: $color-black;             
+                margin: .3rem .9rem;
+                padding: .3rem;
+                @include baw;  
+                border-left: 6px solid rgb(94, 90, 82); 
+
             }
             &__cat{
                 font-weight: 100;
-                font-size: .9em;    
+                font-size: .7em;
+                font-style: italic;   
+                text-transform: uppercase; 
                 letter-spacing: .2rem;
                 word-spacing: .1rem;
-                margin: 0 1rem;
-                color: rgb(121, 121, 121);
+                margin: 0 9rem 0 0;
+                padding: .1rem;
+
 
             }
             &__data{
@@ -53,6 +56,7 @@
                 margin: 0 .8rem;
                 word-spacing: .1rem;
                 word-break: break-all;
+                text-transform: uppercase; 
             }
         }
         &__ul__precio{
@@ -73,11 +77,11 @@
                 border: .1rem solid;
                 letter-spacing: .1rem;
                 font-size: 1.5rem;
-                transition: background-color 1s ease 0;
+                transition: background-color 1s ease 2s;
+                @include wab;
             }
             &__a:hover{
                 @include baw;
-                transition: 1s ;
             }
         }
     }
@@ -105,7 +109,6 @@
                 list-style: none;
                 a{
                     text-decoration: none;
-                    color: rgb(48, 48, 48);
                 }
             }
             &__ul__item{
@@ -113,7 +116,6 @@
                 flex-direction: column;
                 &__titu{
                     display: flex;
-                    color: rgb(44, 44, 44);
                     font-weight: 200;
                     font-size: 1.3rem;
                     justify-content: center;
@@ -167,4 +169,87 @@
 
 
 
-// @media only screen and (max-width: 400px) {
+@media only screen and (max-width: 400px) {
+    .card{
+        display: flex;
+        flex-direction: column;
+        width: 80vw;
+        border: .1rem solid;
+        margin: 1rem 0;
+        &__thumbCard{
+            display: flex;
+            img{
+                display: flex;
+                width: 80vw;
+                height: auto;
+            }  
+        }
+        &__content{
+            display: flex;
+            flex-direction: column;
+            border-radius: 0 0 20px 20px;
+            &__ul {
+                padding-left: 0;
+                li{
+                    list-style: none;
+
+                        a{
+                            text-decoration: none;
+                        }
+                    }
+            }
+            &__ul__item{
+                display: flex;
+                flex-direction: column;
+                &__titu{
+                    display: flex;
+                    font-weight: 200;
+                    font-size: .9rem;
+                    justify-content: center;
+                    letter-spacing: .2rem;
+                    
+                }
+                &__cat{
+                    display: flex;
+                    font-weight: 100;
+                    font-size: .5em;    
+                    letter-spacing: .2rem;
+                    word-spacing: .1rem;
+                    justify-content: center;
+
+                }
+                &__data{
+                    display: flex;
+                    justify-content: center;
+                    font-weight: 200;
+                    font-size: .9rem;
+                    text-align: center;
+                    word-spacing: .1rem;
+                    letter-spacing: 0;
+                    word-break: break-all;
+                }
+            }
+            &__ul__precio p{
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                letter-spacing: .3rem;
+            }
+            &__ul__boton{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-content: center;
+                &__a{
+                    letter-spacing: .1rem;
+                    font-size: 1rem;
+                    padding: 1rem;
+                    border: .1rem solid;
+                    text-align: center;
+                    @include baw; 
+                }
+            }
+        }
+    }
+
+}

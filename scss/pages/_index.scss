@@ -33,16 +33,24 @@
         }
     } 
 }
-@media only screen and (min-width: 401px) and (max-width: 960px) {
+@media only screen and (max-width: 400px) {
     .main__index{
         &__present{
             display: flex;
             object-fit: cover;
             height: auto;
             &__vid{
-                height: 20%;
-                min-width: 400px;
-                max-width: 955px;
+                display: none;
+            }
+        }
+        &__destacados{
+            &__cards{
+                margin: .5rem 0 .5rem 1rem;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                justify-content: center;
+                align-content: center;
             }
         }
     }
