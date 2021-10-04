@@ -3,13 +3,14 @@
     flex-direction: column;
     margin: 3rem;
     width: 23vw;
+    height: 30%;
     border: .1rem solid;
     &__thumbCard{
         display: flex;
         img{
         display: flex;
         width: 23vw;
-        height: auto;
+        height: 30%;
         object-fit: cover;
         } 
     }
@@ -24,39 +25,72 @@
             }
         }
         &__ul__item{
+            display: flex;
+            flex-direction: column;
+            margin: .2rem .8rem;
             &__titu{
                 display: flex;
-                font-weight: 200;
-                font-size: 1.3rem;
+                font-weight: 300;
+                font-size: .7rem;
                 text-transform: uppercase; 
-                justify-content: center;
+                justify-content: flex-start;
                 letter-spacing: .2rem;
                 margin: .3rem .9rem;
                 padding: .3rem;
+                position: relative;
                 @include baw;  
-                border-left: 6px solid rgb(94, 90, 82); 
+                border-left: 6px solid $color-yellow;
+                user-select: none;
+                z-index: 1; 
+                transition: .1s ease-in;
+                &:hover{
+                    color: $color-black;
+                    background-color: none;
+                }
+                &:hover::before{
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background-color: $color-yellow;
+                   
+                }
+                &::before{
+                    content: "";
+                    position: absolute;
+                    top: 0%;
+                    left:0%;
+                    width: 0%;
+                    height: 100%;
+                    background-color: $color-yellow;
+                    z-index: -1;
+                    transition: .9s;
+                }
 
             }
             &__cat{
+                display: flex;
+                justify-content: right;
                 font-weight: 100;
                 font-size: .7em;
                 font-style: italic;   
                 text-transform: uppercase; 
                 letter-spacing: .2rem;
                 word-spacing: .1rem;
-                margin: 0 9rem 0 0;
+                margin: 0 .9rem 0 0;
                 padding: .1rem;
 
 
             }
             &__data{
+                display: flex;
                 font-weight: 200;
-                font-size: 1rem;
+                font-size: .9rem;
                 text-align: justify;
-                margin: 0 .8rem;
-                word-spacing: .1rem;
+                margin: 0 .9rem 0 .7rem;
+                word-spacing: .33rem;
                 word-break: break-all;
-                text-transform: uppercase; 
+                text-transform: capitalize; 
             }
         }
         &__ul__precio{
@@ -77,11 +111,12 @@
                 border: .1rem solid;
                 letter-spacing: .1rem;
                 font-size: 1.5rem;
-                transition: background-color 1s ease 2s;
-                @include wab;
-            }
-            &__a:hover{
-                @include baw;
+                color: $color-black;
+                transition: .1s ease ;
+                &:hover{
+                    @include baw;
+   
+                }
             }
         }
     }

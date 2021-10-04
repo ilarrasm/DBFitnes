@@ -12,7 +12,7 @@ header{
         height: 20vh;
         margin: 1rem;
         position: absolute;
-        left: 56%;
+        left: 46%;
         bottom: 0%;
         padding: 1rem;
         
@@ -24,21 +24,49 @@ header{
     &__ul{
         display: flex;
         list-style: none;
+        margin-right: 1rem ; 
         &__item {
             list-style: none; 
+
             &__link{
+                position: relative;
                 text-decoration: none;
                 font-size: 1.3rem;
                 font-weight: 100;
-                padding: .5rem;
+                padding: .7rem;
+                margin: .5rem;
                 letter-spacing: .1rem;
                 text-transform: uppercase;
                 color: $color-black;
+                z-index: 1;
+                &:hover{
+                    color: $color-main;
+                }
+            } 
+            &__link::before{
+                content: "";
+                width: 0%;
+                height: 2rem;
+                background: $color-black;
+                position: absolute;
+                z-index: -1;
+                bottom: 20%;
+                right: 0%;
+                transition: .5s;
             }
-            &__link:hover{
-                animation: hooverA 2s step-end;
-            }
+            &__link:hover::before{
+                    content: "";
+                    width: 100%;
+                    height: 2rem;
+                    background: $color-black;
+                    position: absolute;
+                    z-index: -1;
+                    bottom: 20%;
+                    left: 0%;
+    
+                    } 
          }
+      
      }
 }
 .nav__two{
@@ -51,21 +79,44 @@ header{
         &__item {
             list-style: none;
             &__link{
+                position: relative;
                 text-decoration: none;
-                padding: 0 1rem;
-                margin: 1rem 1rem;
-                color: $color-black;
                 font-size: 1.3rem;
-                font-weight: 200;
-                text-align: justify;
-                letter-spacing: .4rem;
+                font-weight: 100;
+                padding: .7rem;
+                margin: .5rem;
+                letter-spacing: .1rem;
                 text-transform: uppercase;
+                color: $color-black;
+                z-index: 1;
+                &:hover{
+                    color: $color-main;
+                }
             } 
-            &__link:hover{
-                    animation: hooverA 2s step-end;
+            &__link::before{
+                content: "";
+                width: 0%;
+                height: 2rem;
+                background: $color-black;
+                position: absolute;
+                z-index: -1;
+                bottom: 20%;
+                right: 0%;
+                transition: .5s;
             }
-        }     
-    }
+            &__link:hover::before{
+                    content: "";
+                    width: 100%;
+                    height: 2rem;
+                    background: $color-black;
+                    position: absolute;
+                    z-index: -1;
+                    bottom: 20%;
+                    left: 0%;
+    
+            } 
+        }
+    }     
 }
 
 @media only screen and (min-width: 401px) and (max-width: 960px) {
