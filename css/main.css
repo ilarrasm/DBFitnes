@@ -641,7 +641,7 @@ footer {
     display: flex;
     object-fit: cover; }
     .main__index__present__vid {
-      width: 1262px;
+      width: 100%;
       height: auto;
       border: .1rem solid; }
   .main__index__destacados {
