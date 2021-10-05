@@ -2,32 +2,32 @@
     display: flex;
     flex-direction: row;
     margin-top: 3%;
-    h2{
-        box-shadow: 5px 4px 7px rgb(54, 54, 54);
-    }
     &__texto{
         display: flex;
         flex-direction: column;
-        margin-left: 3rem;
+        margin-left: 1rem;
         align-items: center;
         justify-items: center;
         width: 60%;
+        position: relative;
         &__picture {
             display: flex;
-            align-items: center;
             height: 300px;
-            width: 60%;
+            width: 80%;
             object-fit:cover;
             padding: .5rem;
             background-color: $black-trans;
             box-shadow: 5px 4px 7px rgb(54, 54, 54);
+            position: absolute;
+            top: 50%;
         }
         p{
            letter-spacing: .1rem;
            text-align: justify;
-           width: 60%;
            font-size: 1.2rem;
            word-spacing: .5rem;
+           margin: 1rem 10% 0 5%;
+
         }
  
     }
