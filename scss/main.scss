@@ -1,17 +1,17 @@
-@import "./utils/var";
-@import "./partial/header";
-@import "./partial/typography";
-@import "./partial/card";
-@import "./partial/footer";
-@import "./partial/form";
-@import "./partial/carousel";
-
 @import "./utils/normalize";
+@import "./utils/var";
+@import "./partial/typography";
 @import "./utils/animation";
-@import"./utils/global";
 
 @import "./pages/index";
 @import "./pages/producto";
 @import "./pages/contacto";
 @import "./pages/articulo";
 @import "./pages/nosotras";
+
+@import "./partial/header";
+@import "./partial/card";
+@import "./partial/footer";
+@import "./partial/form";
+@import "./partial/carousel";
+@import "./partial/buttons"

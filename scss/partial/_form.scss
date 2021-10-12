@@ -1,8 +1,6 @@
-
 .main__contact__form{
     display: flex;
     flex-direction: column;
-
     .check{
         display: inline-block;
             
@@ -107,4 +105,31 @@
     }
          
 
+}
+@media only screen and (max-width: 480px) {
+    .main__contact__form{
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        input{
+            align-self: stretch;
+        }
+        &__bloqueA{
+            display: flex;
+             flex-direction: column;
+            &__contactB{
+                margin-left: 0;
+                &__formCono{
+                    margin: 0;
+                    justify-content: flex-start;
+                }
+            }
+        }
+    }
+    .radioForm{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
 }

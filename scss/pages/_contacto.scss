@@ -10,6 +10,9 @@
         justify-items: center;
         width: 60%;
         position: relative;
+        background-image: url(../media/contacto.jpeg);
+        background-size: 100%;
+        background-repeat: no-repeat;
         &__picture {
             display: flex;
             height: 300px;
@@ -25,8 +28,13 @@
            letter-spacing: .1rem;
            text-align: justify;
            font-size: 1.2rem;
-           word-spacing: .5rem;
+           word-spacing: .1rem;
            margin: 1rem 10% 0 5%;
+           background-color: $main-trans;
+           border-radius: 2%;
+           padding: 1rem;
+           border-bottom: 2px dashed $color-black;
+           box-shadow: 1px 1px 10px 4px $black-trans;
 
         }
  
@@ -35,6 +43,26 @@
         display: flex;
         flex-direction: column;
         margin-top: 0%;
-        width: 40%;
+    }
+}
+@media only screen and (max-width: 480px) {
+    .main__contact{
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100vw;
+        &__texto{
+            width: auto;
+            margin-left: 0;
+            padding: .4rem 0;
+            h2{
+                font-size: 1.3rem;
+                letter-spacing: .1rem;
+            }
+            p{
+                margin: .4rem 3rem;
+                font-size: 1.24rem;
+            }            
+        }
     }
 }

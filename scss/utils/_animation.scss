@@ -10,9 +10,8 @@
 }
 
 @keyframes hooverA{
-    0%   {@include baw;;}
+    0%   {@include baw;}
     75% { filter: none;}
-
 }
 @keyframes navAnimationA {
     50% {background-color: rgb(252, 248, 25); }

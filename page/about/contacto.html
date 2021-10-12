@@ -34,7 +34,6 @@
                 <p>
                     D&B es más que un emprendimiento, es una familia.  Las prendas D & B son tu compañera perfecta en cualquier momento. Con su resistencia, comodidad y elegancia permiten estar en todos esos duros entrenamientos para desplegar tu elegancia en  el escenario. 
                 </p>
-                <img class="main__contact__texto__picture" src="../../media/contacto.jpeg" alt="Foto de mujer haciendo pole dance">
             </div>
             <form action="main__contact__form" class="main__contact__form" method="POST" enctype="application/x-www-form-urlencoded">
                 <h2>Formulario</h2> <!-- inicio de formulario-->
@@ -79,13 +78,16 @@
                             </div>
                             <div class="main__contact__form__bloqueA__contactB__formEmpresaType">
                                 <label for="empresatype">Tipo de empresa</label>
-                                <div>Local
+                                <div class="radioForm">
+                                    Local
                                     <input class="main__contact__form__bloqueA__contactB__formEmpresaType__formRadio" type="radio" name="empresatype" value="Local" alt=" empresa tipo local del contacto"/>
                                 </div>
-                                <div>Gimnasio
-                                    <input class="main__contact__form__bloqueA__contactB__formEmpresaType__formRadio" type="radio" name="empresatype" value ="Empresa tipo Gimnasio del contacto"/>
+                                <div class="radioForm">
+                                    Gimnasio
+                                    <input class="main__contact__form__bloqueA__contactB__formEmpresaType__formRadio" type="radio" name="empresatype" value="gimnasio" alt="Empresa tipo Gimnasio del contacto"/>
                                 </div>
                             </div>
+                            <h4>¿como nos conociste?</h4>
                             <div class="main__contact__form__bloqueA__contactB__formCono">
                                 <div class="main__contact__form__bloqueA__contactB__formCono__label">
                                     <label class="check" for="IGcheck">Instagram</label>
@@ -104,7 +106,7 @@
                     <div class="main__contact__form__bloqueC__formAsunto">
                         <label for="asunto">Asunto</label>
                         <input type="text" name="asunto" placeholder="Título del asunto" alt="Titulo de la consulta"/>
-                        <textarea disable rows="3" cols="20" placeholder="Escriba aquí su consulta" ></textarea>
+                        <textarea disable rows="3" cols="20" placeholder="Escriba aquí su consulta" alt="Escriba aquí su consulta" ></textarea>
                     </div>
                     <div class="main__contact__form__bloqueC__formBoton">
                         <input type="submit" value="enviar" alt="enviar formulario"/>

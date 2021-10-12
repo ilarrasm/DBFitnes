@@ -1,0 +1,41 @@
+.main__articulo{
+    display: flex;
+    border-top: 1px solid $color-black;
+    &__cuerpo{
+        display: flex;
+        flex-direction: column;
+        width: 70vw;
+        &__header{
+            display: flex;
+            flex-direction: column;
+            p{
+                align-self: center;
+            }
+        }
+            background-color: crimson;
+        &__img img{
+                width: 100%;
+        }
+
+    }
+    &__aside{
+        display: flex;
+        flex-direction: column;
+        width: 30vw;
+        background-color: cyan;
+        h1{
+            font-size: 3rem;
+        }
+        p{
+            font-size: 2rem;
+        }
+        &__form{
+            position: sticky;
+            right: 0;
+            top: 10%;
+            z-index: 1;
+            height: 100vh;
+        }
+
+    }
+}
