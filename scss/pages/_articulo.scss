@@ -1,41 +1,339 @@
+#article{
+    display: grid;
+    grid-template-rows: 10vh auto 7vh;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 4px;
+    grid-row-gap: 8px;
+    header{
+        grid-area: 1 span / 1 / 2 / 13;
+        height: 12vh;
+        background-color: $color-main;
+        img{
+            display: none;
+        }
+    }
+    footer{
+        grid-area: 3 / 1 / 4 / 13;
+        height: 15vh;
+        width: auto;
+    }
+}
+//icon info
+.euroIco{
+    display: inline-block;
+    width: 7%;
+    height: auto;
+}
+.envioFree img{
+    width: 35%;
+    height: auto;
+    display: inline-block;
+}
+.devolucionFree img{
+    width: 15%;
+    height: auto;
+    display: inline-block;
+}
+.safePay img{
+    width: 30%;
+    height: auto;
+    display: inline-block;
+}
 .main__articulo{
     display: flex;
-    border-top: 1px solid $color-black;
+    grid-area: 2 / 1 / 3 / 9;
+    background-color: $color-main;
     &__cuerpo{
         display: flex;
         flex-direction: column;
         width: 70vw;
-        &__header{
-            display: flex;
-            flex-direction: column;
-            p{
-                align-self: center;
-            }
-        }
-            background-color: crimson;
-        &__img img{
-                width: 100%;
-        }
-
-    }
-    &__aside{
-        display: flex;
-        flex-direction: column;
-        width: 30vw;
-        background-color: cyan;
-        h1{
-            font-size: 3rem;
-        }
         p{
             font-size: 2rem;
         }
-        &__form{
-            position: sticky;
-            right: 0;
-            top: 10%;
-            z-index: 1;
-            height: 100vh;
+        img{
+            height: 120vh;
+            width: 100%;
+            object-fit:cover;
+            object-position: 0% 35%;
+        }
+        &__header{
+            display: flex;
+            flex-direction: column;
+        }
+        &__info {
+            background-image: url("../media/carousel/awesome.webp");
+            background-attachment: cover;
+            background-size: 100% auto;
+            background-repeat: no-repeat;
+            background-position: 30% 60%;
+            height: 70vh;
+            margin-bottom: 3%;
+            &::before{
+                content: "";
+                display: flex;
+                position: relative;
+                top: 0;
+                left: 0;
+                width: 0%;
+                height: 80%;
+                z-index: 1;
+                background: $main-trans-1;
+                transition: .5s;
+            }
+            &:hover::before{
+                width: 95%;
+            }
+            &:hover > p{
+                display: inline-block;
+            }
+            p{
+                display: none;
+                font-family: "Open sans";
+                font-size: 1.4rem;
+                margin-right: 10%;
+                margin-left: 5%;
+                padding: .5rem;
+                position: relative;
+                top: -70%;
+                left: 0%;
+                z-index: 1;
+                font-weight: 100;
+
+            }
         }
 
     }
+}
+.aside{
+    grid-area: 2/9/3/13;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 253);
+    padding: 1rem;
+    position: sticky;
+    &__section{
+        position: sticky;
+        top: 0;
+        right: 0;
+        &__catArticle{
+            text-align: right;
+            font-size: .7rem;
+            margin-left: .3rem;
+        }
+        h1{
+            font-size: 3.2rem;
+            word-spacing: 0;
+            text-align: end;
+            padding:.3rem; 
+            background: none;
+            color: $color-black;   
+            text-align: left;
+        }
+        &__subtitle{
+            font-size: .9rem ;
+            font-weight: 100;
+            font-style: italic;
+            margin-left: 3rem;
+        }
+        &__info{
+            margin-left: 3rem;
+           &__ul{
+               margin: .5rem;
+                &__item{
+                    display: flex;
+                    flex-direction: row-reverse;
+                    align-items: center;
+                    align-content: flex-start;
+                    list-style: none;
+                    text-transform: uppercase;
+                    font-weight: 300;
+                    justify-content: space-evenly;
+                }
+           }
+        }
+    }
+    
+    &__form{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        z-index: 1;
+        position: sticky;
+        margin-bottom: 0;
+        right: 0;
+        top: 45%; 
+        .talleTitulo{
+            font-size: 1.2rem;
+            text-align: center;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+        &__talle{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            margin: .5rem;
+            @include bottom-radius;
+            .talleXs{
+                grid-area: 1 / 1 / 2 / 2 ;
+
+            }
+            .talleS{
+                grid-area: 1 / 2 / 2 / 3;
+                
+            }
+            .talleM{
+                grid-area: 1 / 3 / 2 / 4;
+                
+            }
+            .talleX{
+                grid-area: 2 / 1 / 3 / 2;
+                
+            }
+            .talleXl{
+                grid-area: 2 / 2 / 3 / 3;
+                
+            }
+            .talleXXL{
+                grid-area: 2 / 3 / 3 / 4 ;
+
+            }
+        }
+        .botonBuy{
+            display: inline-block;
+            background: $color-black;
+            padding: 1rem;
+            margin:  0 .4rem;
+            border: 0;
+        }
+        .aBay{
+            text-decoration: none;
+            color: $color-main;
+            font-weight: 300;
+            font-size: 1rem;
+        }
+    }
+
+} 
+
+
+
+
+//mediaqueris
+@media only screen and (max-width: 960px){
+    #article{
+        display: grid;
+        grid-template-rows: 20vh 2fr 0fr 10vh;
+        grid-template-columns: 1fr;
+        header{
+          grid-area:  1 / 1 / 2 / 2 ;
+          
+        }
+        footer{
+          grid-area: 4 / 1 / 5 / 2;  
+        }
+        .main__articulo{
+            grid-area:  2 / 1 / 3 / 2;
+            &__cuerpo{
+                width: auto;
+                
+                &__info{
+                    display: flex;
+                    flex-direction: column;
+                    &::before{
+                        display: none;
+                        background-size: 12% auto;
+                    }
+                }
+                p{
+                    display: flex;
+                    background-color: $main-trans-2;
+                    position: static;
+                    margin-top: 2rem;
+                }
+            }
+        }
+        .aside{
+            grid-area: 3 / 1 / 4 /2;
+            &__section{
+                position: static;
+                &__info__ul__item{
+                    justify-content: flex-end;
+                }
+            }
+            form{
+                position: static;
+                span{font-size: 3rem;
+                    padding: 1rem;
+                }   
+            }
+        }
+    }
+    .euroIco{
+        display: inline-block;
+        width: 1%;
+        height: auto;
+    }
+    .envioFree img{
+        width: 3%;
+        height: auto;
+        display: inline-block;
+    }
+    .devolucionFree img{
+        width: 3%;
+        height: auto;
+        display: inline-block;
+    }
+    .safePay img{
+        width: 3%;
+        height: auto;
+        display: inline-block;
+    }
+
+
+}
+@media only screen and (max-width: 480px){
+    #article {
+        grid-template-columns: 1fr;
+        grid-template-rows: 140vh 60vh 20vh 15vh;
+        header{
+            grid-area: 3 / 1 / 4 / 2;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, 1fr);
+            height: auto;
+            background: $color-black;
+            a{
+                color: $color-main;
+            }
+            .nav__one{
+                grid-area: 1 / 1 / 2 / 2;
+            }
+            .nav__two{
+                grid-area: 2/ 1 / 3 / 1;
+            }
+        }
+        .main__articulo{
+            grid-area: 1 / 1 / 2 / 2;
+
+            &__cuerpo__info{
+                background-image: url("../media/carousel/awesome.webp");
+            background-attachment: cover;
+            background-size: 170% auto;
+            background-repeat: no-repeat;
+            background-position: 30% 60%;
+            p{
+                border: 3px solid $color-main;
+            }
+            }
+        }
+        .aside{
+            display: static;
+            grid-area: 2 / 1 / 3 / 2;
+        }
+        footer{
+            grid-area: 4 / 1 / 5/ 2;
+        }
+    }
+    
 }

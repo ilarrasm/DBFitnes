@@ -1,6 +1,9 @@
-.main__contact__form{
+.main__contact__section__form{
     display: flex;
     flex-direction: column;
+    background: $main-trans-1;
+    padding: 1rem;
+    width: 40vw;
     .check{
         display: inline-block;
             
@@ -24,6 +27,7 @@
         padding: 1rem;
         flex-direction: row;
         justify-items: stretch;
+        background-color: $color-main;
         &__contatcA{
             display: flex;
             flex-direction: column;
@@ -47,25 +51,19 @@
             height: auto;
             width: 60%;
             margin-left: 4.3rem;
+            h4{
+                font-size: 1.1rem;
+                font-style: normal;
+                font-weight: 300;
+            }
+            &__formEmpresaType{
+                @include bottom-radius-1;
+            }
             &__formCono{
                 display: flex;
                 text-align: left;
                 justify-self: flex-start;
-                &__label{
-                    display: flex;
-                    flex-direction: column;
-                }
-                &__input{
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-evenly;
-                    margin: 0 0 .1rem 2rem;
-                    width:30%;
-                    input{
-                        width:30%;
-                        margin: 0 0 .1rem 2rem;
-                    } 
-                }
+                @include bottom-radius-1;
             }
         }    
     }
@@ -74,6 +72,7 @@
         flex-direction: column;
         justify-content: space-around;
         padding: 1rem;
+        background-color: $color-main;
         &__formAsunto{
             display: flex;
             flex-direction: column;
@@ -103,14 +102,18 @@
             }
         }
     }
-         
-
 }
+
+
+
+//MEDIAS
 @media only screen and (max-width: 480px) {
-    .main__contact__form{
+    .main__contact__section__form{
         display: flex;
         flex-direction: column;
-        width: auto;
+        align-self: stretch;
+        width: 100%;
+        padding: 0;
         input{
             align-self: stretch;
         }
@@ -132,4 +135,27 @@
         justify-content: space-between;
 
     }
+}
+@media only screen and (min-width: 480px) and (max-width: 960px) { 
+    .main__contact__section__form{
+        display: flex;
+        flex-direction: column;
+        align-self: stretch;
+        width: 90%;
+        input{
+            align-self: stretch;
+        }
+        &__bloqueA{
+            display: flex;
+             flex-direction: row;
+            &__contactB{
+                width: auto;
+                &__formCono{
+                    margin: 0;
+                    justify-content: flex-start;
+                }
+            }
+        }
+    }
+
 }

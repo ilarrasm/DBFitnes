@@ -1,68 +1,173 @@
+
 .main__contact{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin-top: 3%;
-    &__texto{
+    height: auto; 
+    margin-bottom: 2%;
+    &__titu{
+        font-size: 7rem;
+        align-self: center;
+    }
+    &__section{
         display: flex;
-        flex-direction: column;
-        margin-left: 1rem;
-        align-items: center;
-        justify-items: center;
-        width: 60%;
-        position: relative;
-        background-image: url(../media/contacto.jpeg);
-        background-size: 100%;
-        background-repeat: no-repeat;
-        &__picture {
-            display: flex;
-            height: 300px;
-            width: 80%;
-            object-fit:cover;
-            padding: .5rem;
-            background-color: $black-trans;
-            box-shadow: 5px 4px 7px rgb(54, 54, 54);
-            position: absolute;
-            top: 50%;
-        }
-        p{
-           letter-spacing: .1rem;
-           text-align: justify;
-           font-size: 1.2rem;
-           word-spacing: .1rem;
-           margin: 1rem 10% 0 5%;
-           background-color: $main-trans;
-           border-radius: 2%;
-           padding: 1rem;
-           border-bottom: 2px dashed $color-black;
-           box-shadow: 1px 1px 10px 4px $black-trans;
+        flex-direction: row;
+        margin: 1rem;
+        &__texto{
+            width: 70%;
+            margin-left: 1rem;
+            position: relative;
+            background: url("../media/carousel/woodstock.webp");
+            #spamDb{
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 300;
+                font-size: 3rem;
+                text-transform: uppercase;
+                letter-spacing: .1rem;
+                position: absolute; 
+                top: 2%;
+                left: -5%;
+                padding: 1rem;
+                z-index: 1  ;
+                color: $color-black;
+                user-select: none;
+
+                &::before{
+                    content: "";
+                    width: 390%;
+                    height: 81%;
+                    background-color: $color-black;
+                    position: absolute;
+                    top: 8%;
+                    left: 18%;
+                    z-index: -1;
+                }
+                &::after{
+                    content: "";
+                    width: 380%;
+                    height: 85%;
+                    background-color: $color-yellow;
+                    position: absolute;
+                    top: 0;
+                    left: 10%;
+                    z-index: -1;
+                }
+               
+            }
+            &__p{
+                font-family: 'Open Sans', sans-serif;
+                letter-spacing: .1rem;
+                text-align: justify;
+                font-weight: 100;
+                font-size: 1.3rem;
+                word-spacing: .1rem;
+                padding: 2rem;
+                margin: 10% 4% 0 .1rem;
+                position: absolute; 
+                left: 0;
+                top: 0;
+                background-color: $main-trans-2;
+                height: auto;
+                box-shadow: 8px 7px 15px $black-trans;
+                span{
+                    font-weight: 200;
+                    word-spacing: -.698rem;
+                    background-color: $color-yellow;
+                }
+            }
 
         }
- 
     }
-    &__form{
-        display: flex;
-        flex-direction: column;
-        margin-top: 0%;
-    }
+       
 }
 @media only screen and (max-width: 480px) {
     .main__contact{
         display: flex;
         flex-direction: column;
         align-items: stretch;
-        width: 100vw;
+        width: auto;
+        &__titu{
+            font-size: 3rem;
+        }
+        &__section{
+            display: flex;
+            flex-direction: column;
+            &__texto{
+                width: auto;
+                margin-left: 0;
+                padding: .0;
+                position: static;
+                #spamDb{
+                    font-family: 'Open Sans', sans-serif;
+                    font-weight: 300;
+                    font-size: 1rem;
+                    text-transform: uppercase;
+                    letter-spacing: .1rem;
+                    top: 2%;
+                    left: -5%;
+                    padding: 1rem;
+                    z-index: 1  ;
+                    color: $color-black;
+                    user-select: none;
+                    position: relative;
+                }
+                h2{
+                    font-size: 1rem;
+                    letter-spacing: .1rem;
+                }
+                p{
+                    margin: .4rem 3rem;
+                    font-size: 1.24rem;
+                    position: static;
+                }            
+            }
+            &__form{
+                display: flex;
+                flex-direction: column;
+                &__bloqueA{
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 960px) {
+    .main__contact__section{
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        width: auto;
         &__texto{
             width: auto;
             margin-left: 0;
-            padding: .4rem 0;
+            padding: .0;
+            position: static;
+            #spamDb{
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 300;
+                font-size: 1rem;
+                text-transform: uppercase;
+                letter-spacing: .1rem;
+                top: 2%;
+                left: 5%;
+                padding: 1rem;
+                z-index: 1  ;
+                color: $color-black;
+                user-select: none;
+                position: relative;
+            }
             h2{
-                font-size: 1.3rem;
+                font-size: 1rem;
                 letter-spacing: .1rem;
             }
             p{
                 margin: .4rem 3rem;
                 font-size: 1.24rem;
+                position: static;
             }            
         }
     }
+
 }

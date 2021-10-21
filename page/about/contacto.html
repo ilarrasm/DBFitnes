@@ -7,11 +7,15 @@
     <link rel="stylesheet" href="../../css/main.css" type="text/css">
     <meta name="description" content="D&B Pole Dance & Fitness Wear. Contactanos para sumarte a nuestra marca, los productos D&B en tu gimnasio.     Te acompaña en los escenarios y tus entrenamientos.  Activewear para Poledance, Yoga, Aerial Sport & Gym. "> 
     <meta name="keywords" content="FITNESS,POLE DANCE,WEAR,PRENDAS,DEPORTES,Training, elegancia,Yoga,Aerial Sport,Gym, contacto, email, presupuesto, productos, marca">
+    <link rel="shortcut icon" href="../../media/favicon.ico">
     <title>D&B | Contactanos</title>
 </head>
 <body>
+    <a href="https://www.instagram.com/dbcostumeswear/" class="instagram"><img src="../../media/iconos/igico.png"></a>
     <header>
-        <img src="../../media/logo.png" alt="Logo de D&B">
+        <picture>
+            <img src="../../media/logo.png" alt="Logo de D&B">
+        </picture>
         <nav class="nav__two">
             <ul class="nav__two__ul">
                 <li class="nav__two__ul__item"><a class="nav__two__ul__item__link" href="../categorias/poledance.html">Pole dance</a></li>
@@ -28,35 +32,41 @@
         </nav>                    
     </header>
     <main class="main__contact">
-        <h1 class="main__contact_titu"></h1>
-            <div class="main__contact__texto"> 
-                <h2>Sumate a nuestro equipo</h2>
-                <p>
-                    D&B es más que un emprendimiento, es una familia.  Las prendas D & B son tu compañera perfecta en cualquier momento. Con su resistencia, comodidad y elegancia permiten estar en todos esos duros entrenamientos para desplegar tu elegancia en  el escenario. 
+        <h2 class="main__contact__titu">Contactanos</h2>
+        <section class="main__contact__section">
+            <div class="main__contact__section__texto"> 
+                <span id="spamDb">D&B</span>
+                <p class="main__contact__section__texto__p">
+                     es más que un emprendimiento, es una familia.  
+                    Las prendas <span>D&B</span> son tu compañera perfecta en cualquier momento. 
+                    Con su resistencia, comodidad y elegancia permiten estar en todos 
+                    esos duros entrenamientos como en los escenarios a la hora de desplegar tu elegencia. 
                 </p>
+                <picture class="main__contact__section__texto__pic">
+                </picture>
             </div>
-            <form action="main__contact__form" class="main__contact__form" method="POST" enctype="application/x-www-form-urlencoded">
+            <form class="main__contact__section__form"  method="POST" enctype="application/x-www-form-urlencoded">
                 <h2>Formulario</h2> <!-- inicio de formulario-->
-                <div class="main__contact__form__bloqueA">        
-                    <div class="main__contact__form__bloqueA__contatcA">
+                <div class="main__contact__section__form__bloqueA">        
+                  <div class="main__contact__section__form__bloqueA__contatcA">
                         <legend>Datos de contacto</legend>
-                        <div class="main__contact__form__bloqueA__contatcA__Name">
+                        <div class="main__contact__section__form__bloqueA__contatcA__Name">
                             <label for="nombre">Nombre</label>
                             <input type="text" name="nombre" alt="Nombre del contacto"/>
                         </div>
-                        <div class="main__contact__form__bloqueA__contatcA__formAp">
+                        <div class="main__contact__section__form__bloqueA__contatcA__formAp">
                                 <label for="__bloqueA__contatcA__apellido">Apellido</label>
                                 <input type="text" name="apellido" alt="apellido del contacto"/>
                             </div>
-                            <div class="main__contact__form__bloqueA__contatcA__formEmail">
+                            <div class="main__contact__section__form__bloqueA__contatcA__formEmail">
                                 <label for="email">Correo</label>
                                 <input type="email" name="email" placeholder="nombre@ejemplo.com" alt="email del contacto"/>
                             </div>
-                            <div class="main__contact__form__bloqueA__contatcA__formTel">
+                            <div class="main__contact__section__form__bloqueA__contatcA__formTel">
                                 <label for="telefono">Whatsapp</label>
                                 <input type="tel" name="telefono" palceholder="numero de area + número de tel" alt="telefono del contacto"/>
                             </div> 
-                            <div class="main__contact__form__bloqueA__contatcA__formPais">
+                            <div class="main__contact__section__form__bloqueA__contatcA__formPais">
                                 <label for="pais">País</label>
                                 <select name="pais">
                                     <option value="Arg">Argentina</option>
@@ -64,55 +74,48 @@
                                     <option value="Uru">Uruguay</option>
                                 </select> 
                             </div>
-                            <div class="main__contact__form__bloqueA__contatcA__formUrl">
+                            <div class="main__contact__section__form__bloqueA__contatcA__formUrl">
                                 <label  for="url">Red social/Web</label>
                                 <input type="url" name="url" placeholder="https://www.ejemplo.com" alt="web del contacto"/>
                             </div>
                     </div>
                         <!--- división del form   -->
-                    <div class="main__contact__form__bloqueA__contactB">
+                    <div class="main__contact__section__form__bloqueA__contactB">
                             <legend>Datos de empresa</legend>
-                            <div class="main__contact__form__bloqueA__contactB__formEmpresaName">
-                                <label for="nombreinst">Nombre de la empresa</label>
+                            <div class="main__contact__section__form__bloqueA__contactB__formEmpresaName">
+                                <h4 for="nombreinst">Nombre de la empresa</h4>
                                 <input type="text" name="nombreinst" alt="nombre de la empresa de contacto"/>
                             </div>
-                            <div class="main__contact__form__bloqueA__contactB__formEmpresaType">
-                                <label for="empresatype">Tipo de empresa</label>
-                                <div class="radioForm">
-                                    Local
-                                    <input class="main__contact__form__bloqueA__contactB__formEmpresaType__formRadio" type="radio" name="empresatype" value="Local" alt=" empresa tipo local del contacto"/>
-                                </div>
-                                <div class="radioForm">
-                                    Gimnasio
-                                    <input class="main__contact__form__bloqueA__contactB__formEmpresaType__formRadio" type="radio" name="empresatype" value="gimnasio" alt="Empresa tipo Gimnasio del contacto"/>
-                                </div>
+                            <div class="main__contact__section__form__bloqueA__contactB__formEmpresaType">
+                                <h4 >Tipo de empresa</h4>
+                                <input  class="main__contact__section__form__bloqueA__contactB__formEmpresaType__formRadio" type="radio" id="local" name="empresatype"  alt="empresa tipo local del contacto"/>
+                                <label  for="local">Local</label>
+                                <input  class="main__contact__section__form__bloqueA__contactB__formEmpresaType__formRadio" type="radio" id="gimnasio" name="empresatype"   alt="Empresa tipo Gimnasio del contacto"/>
+                                <label  for="gimnasio">Gimnasio</label>
                             </div>
-                            <h4>¿como nos conociste?</h4>
-                            <div class="main__contact__form__bloqueA__contactB__formCono">
-                                <div class="main__contact__form__bloqueA__contactB__formCono__label">
-                                    <label class="check" for="IGcheck">Instagram</label>
-                                    <label class="check" for="foogleCheck">Google</label>
-                                    <label class="check" for="friendCheck">otros</label>
-                                </div>  
-                                <div class="main__contact__form__bloqueA__contactB__formCono__input">
-                                    <input class="boxC" type="checkbox" name="IGcheck" value="1" alt="El contacto nos conoce por instagram"/>
-                                    <input class="boxC" type="checkbox" name="foogleCheck" value="0" alt="El contacto nos conoce por Google"/>
-                                    <input class="boxC" type="checkbox" name="friendCheck" value="0" alt="El contacto nos conoce por otros medios"/>
-                                </div> 
+                            <h4>Nos conociste por</h4>
+                            <div class="main__contact__section__form__bloqueA__contactB__formCono">
+                                <input type="radio" name="conociste" value="1" id="insta" alt="El contacto nos conoce por instagram"/>    
+                                <label for="insta">Instagram</label>
+                                <input type="radio" name="conociste"" value="0" id="google" alt="El contacto nos conoce por Google"/>
+                                <label for="google">Google</label>
+                                <input type="radio" name="conociste"" value="0" id="otros" alt="El contacto nos conoce por otros medios"/>
+                                <label for="otros">otros</label>     
                             </div>                       
                     </div>
                 </div> 
-                <div class="main__contact__form__bloqueC"> 
-                    <div class="main__contact__form__bloqueC__formAsunto">
+                <div class="main__contact__section__form__bloqueC"> 
+                    <div class="main__contact__section__form__bloqueC__formAsunto">
                         <label for="asunto">Asunto</label>
                         <input type="text" name="asunto" placeholder="Título del asunto" alt="Titulo de la consulta"/>
                         <textarea disable rows="3" cols="20" placeholder="Escriba aquí su consulta" alt="Escriba aquí su consulta" ></textarea>
                     </div>
-                    <div class="main__contact__form__bloqueC__formBoton">
+                    <div class="main__contact__section__form__bloqueC__formBoton">
                         <input type="submit" value="enviar" alt="enviar formulario"/>
                     </div>
                 </div>   
-            </form> <!-- Fin de formulario-->
+        </form4class=>
+        </section> <!-- Fin de formulario-->
     </main>
     <footer> <!-- inicio footer -->
         <div class="logoFoot"> <!-- Logo footer -->

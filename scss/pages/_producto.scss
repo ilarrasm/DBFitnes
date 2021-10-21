@@ -1,13 +1,27 @@
 .main__product{
     display: flex;
     flex-direction: column;
+    align-items: center;
     h2{
         display: flex;
-        font-size: 2.3rem;
-        margin: 0 0 0 3rem;
+        font-size: 13rem;
+        font-weight: 400;
+        letter-spacing: 4.3rem;
+        margin: 0 0 0 5rem;
+
     }
     &__cards{
         display: flex;
         flex-wrap: wrap;
     }
-}  
+
+}
+@media only screen and (max-width: 480px) { 
+
+    .main__product{
+        &__cards{
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}

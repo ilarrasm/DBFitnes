@@ -1,11 +1,15 @@
+//VARS
 $color-black: #181717;
 $color-yellow:#FDE50D ;
 $color-main: whitesmoke;
-$main-trans: rgba(245, 245, 245, .82);
-$black-trans: rgba(8, 8, 8, 0.808);
+$main-trans: rgba(255, 255, 255, 0.1);
+$black-trans: rgba(8, 8, 8, 0.99);
+$black-trans-1: rgba(8, 8, 8, 0.3);
+$main-trans-1: linear-gradient(180deg, rgba(245,245,245,.8) 0%, rgba(245,245,245,0) 100%);
+$main-trans-2: rgba(255, 255, 255, 0.9);
 
 
-
+//MIXIN DE BLACK AND WITHE ... BLACK AND YELLOW
 @mixin baw {
     background-color: $color-black;
     color: $color-main;  
@@ -28,3 +32,53 @@ $black-trans: rgba(8, 8, 8, 0.808);
     color: $color-yellow;
     
 }
+@mixin bottom-radius{
+    input[type="radio"], input[type="checkbox"]{
+        display: none;
+        position: relative;
+        &:checked + label{
+            @include baw;
+        }
+    }
+    label{
+        display: inline-block;
+        padding: 1rem;
+        margin: .5rem;
+        border: 1px solid black;
+        font-weight: 900;
+        text-align: center;
+        &:hover{
+            cursor: pointer;
+            @include bawt();
+        }
+    }
+}
+@mixin bottom-radius-1{
+    input[type="radio"]{
+        display: none;
+        position: relative;
+    }
+    input:checked + label{
+        @include bawt;
+    }
+    label{
+        display: inline-block;
+        padding: .6rem;
+        margin: .5rem;
+        border: 1px solid black;
+        font-weight: 900;
+        text-align: center;
+        font-size: .7rem;
+        &:hover{
+            cursor: pointer;
+            @include bawt();
+        }
+    }
+}
+//BUCLES FOR 
+
+//LISTAS
+
+
+
+//EACHS

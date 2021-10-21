@@ -4,13 +4,15 @@
     margin: 3rem;
     width: 23vw;
     height: 30%;
-    border: .1rem solid;
+    background: $color-main;
     &__thumbCard{
         display: flex;
+        height: 20vh;
+        width: auto;
         img{
         display: flex;
-        width: 23vw;
-        height: 30%;
+        width: 100%;
+        height: auto;
         object-fit: cover;
         } 
     }

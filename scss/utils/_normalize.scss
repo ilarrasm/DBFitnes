@@ -2,3 +2,29 @@
     padding: 0;
     margin: 0;
 }
+@media only screen and (max-width: 480px) {
+    body{
+        background: $color-main;
+    }
+}
+
+.instagram{
+    position: fixed;
+    left: 94%;
+    top: 90%;
+    img{
+        width: 5vw;
+        background: $color-black;
+        border-radius: 60%;
+        z-index: 1;
+    }
+}
+@media only screen and (max-width: 960px){
+    .instagram{
+        left: 86%;
+        top: 67%;
+        img{
+            width: 10vw;
+        }
+    }
+}
