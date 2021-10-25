@@ -989,7 +989,7 @@ header {
     #contact header picture img {
       display: flex;
       position: relative;
-      left: 30%;
+      left: 50%;
       top: 0;
       width: 25vw;
       height: auto;
