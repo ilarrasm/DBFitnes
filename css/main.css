@@ -604,8 +604,9 @@ h3, h4, h5, h5 {
           background-color: rgba(255, 255, 255, 0.9);
           position: static;
           margin-top: 2rem; }
-    #article #aside_articulo {
-      grid-area: 3 / 1 / 4 /2; }
+    #article #aside__articulo {
+      grid-area: 3 / 1 / 4 /2;
+      position: static; }
     #article .aside__section {
       position: static; }
       #article .aside__section__info__ul__item {
@@ -659,8 +660,9 @@ h3, h4, h5, h5 {
         background-position: 30% 60%; }
         #article .main__articulo__cuerpo__info p {
           border: 3px solid whitesmoke; }
-    #article #aside_articulo {
-      grid-area: 2 / 1 / 3 / 2; }
+    #article #aside__articulo {
+      grid-area: 2 / 1 / 3 / 2;
+      position: static; }
     #article .aside {
       position: static; }
     #article footer {
