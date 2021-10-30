@@ -2,10 +2,10 @@ footer{
     display: flex;
     justify-content: space-between;
     font-style: normal;
-    height: 20vh;
     background-color: $color-black;
     p{
         color: $color-main;
+        text-transform: uppercase;
     }
     .logoFoot{
         display: flex;
@@ -15,7 +15,7 @@ footer{
         word-spacing: .2rem; 
         margin: 1rem;
         &__dbFoot{
-            font-weight: 300;
+            font-weight: 200;
             font-size: 1.7rem;
             line-height: 1.3; 
     
